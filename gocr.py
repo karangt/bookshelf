@@ -24,7 +24,7 @@ def detectText(client, img):
     # Convert img numpy array to binary format
     content = cv2.imencode('.jpg', img)[1].tostring()
 
-    image = vision.types.Image(content=content)
+    image = vision.Image(content=content)
     # Call the text detection API
     response = client.text_detection(image=image)
 
